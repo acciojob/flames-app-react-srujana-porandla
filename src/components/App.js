@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>FLAMES Relationship Calculator</h1>
+      
       <div className="input-container">
         <input
           type="text"
@@ -75,7 +75,7 @@ function App() {
         </button>
       </div>
       {relationshipStatus && (
-        <h3 data-testid="answer">{relationshipStatus ? `Relationship: ${relationshipStatus}` : ''}</h3>
+        <h3 data-testid="answer">{relationshipStatus ? `${relationshipStatus}` : ''}</h3>
       )}
     </div>
   );
