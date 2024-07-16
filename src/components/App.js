@@ -6,7 +6,8 @@ import '../styles/App.css';
 function App() {
   const [name1, setName1] = useState('');
   const [name2, setName2] = useState('');
-  const [relationshipStatus, setRelationshipStatus] = useState('');
+  const [relationshipStatus, setRelationshipStatus] = useState('Enter names and click Calculate');
+  //const [relationshipStatus, setRelationshipStatus] = useState('');
 
   const handleName1Change = (event) => {
     setName1(event.target.value);
@@ -75,7 +76,8 @@ function App() {
         </button>
       </div>
       {relationshipStatus && (
-        <h3 data-testid="answer">{relationshipStatus ? `Relationship: ${relationshipStatus}` : ''}</h3>
+        <h3 data-testid="answer">{relationshipStatus}</h3>
+        //<h3 data-testid="answer">{relationshipStatus ? `Relationship: ${relationshipStatus}` : ''}</h3>
       )}
     </div>
   );
