@@ -75,7 +75,7 @@ function App() {
         </button>
       </div>
       {relationshipStatus && (
-        <h3 data-testid="answer">{relationshipStatus ? `${relationshipStatus}` : ''}</h3>
+        <h3 data-testid="answer"></h3>
       )}
     </div>
   );
