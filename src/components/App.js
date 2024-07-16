@@ -55,6 +55,7 @@ function App() {
           value={name1}
           onChange={handleName1Change}
           data-testid="input1"
+          name="name1" 
         />
         <input
           type="text"
@@ -62,6 +63,7 @@ function App() {
           value={name2}
           onChange={handleName2Change}
           data-testid="input2"
+          name="name2"
         />
       </div>
       <div className="button-container">
