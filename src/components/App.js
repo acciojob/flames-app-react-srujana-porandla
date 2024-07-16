@@ -17,6 +17,11 @@ function App() {
   };
 
   const calculateRelationship = () => {
+    
+    if (!name1 || !name2) {
+       setRelationshipStatus('Please Enter valid input');
+      return;
+    }
     const name1Set = new Set(name1.toUpperCase());
     const name2Set = new Set(name2.toUpperCase());
 
@@ -24,14 +29,12 @@ function App() {
     let remainingName1 = [...name1.toUpperCase()].filter(char => !name2Set.has(char)).join('');
     let remainingName2 = [...name2.toUpperCase()].filter(char => !name1Set.has(char)).join('');
 
-    // Calculate sum of remaining lengths
     const sumOfLengths = remainingName1.length + remainingName2.length;
 
-    // Determine relationship status
+    
     const statusIndex = sumOfLengths % 6;
 
-    // Relationship statuses based on FLAMES game
-    const statuses = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enemy"];
+   const statuses = ["Siblings", "Friends", "Love", "Affection", "Marriage", "Enemy"];
 
     setRelationshipStatus(statuses[statusIndex]);
   };
